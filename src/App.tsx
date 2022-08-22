@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/*
+ * @Author: 刘凌晨 liulingchen1109@163.com
+ * @Date: 2022-08-22 14:10:31
+ * @LastEditTime: 2022-08-22 14:27:05
+ * @FilePath: \react-todolist-ts\src\App.tsx
+ */
+
+import TodoList from "./components/TodoList";
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TodoList />
     </div>
   );
 }
