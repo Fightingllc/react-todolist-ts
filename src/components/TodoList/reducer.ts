@@ -1,7 +1,7 @@
 /*
  * @Author: 刘凌晨 liulingchen1109@163.com
  * @Date: 2022-08-22 19:47:17
- * @LastEditTime: 2022-08-22 20:08:09
+ * @LastEditTime: 2022-08-22 21:15:11
  * @FilePath: \react-todolist-ts\src\components\TodoList\reducer.ts
  */
 import { IState, IAction, ACTION_TYPE, ITodo } from './types/index';
@@ -11,6 +11,11 @@ function todoReducer(state: IState, action: IAction) {
     const {type, payload} = action
 
     switch (type) {
+        case ACTION_TYPE.INIT_TODOLIST:
+            return {
+                ...state,
+                todoList: payload as ITodo[]
+            }
         case ACTION_TYPE.ADD_TODO:
             return {
                 ...state,

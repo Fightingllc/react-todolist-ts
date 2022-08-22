@@ -1,7 +1,7 @@
 /*
  * @Author: 刘凌晨 liulingchen1109@163.com
  * @Date: 2022-08-22 14:24:38
- * @LastEditTime: 2022-08-22 20:16:42
+ * @LastEditTime: 2022-08-22 20:51:38
  * @FilePath: \react-todolist-ts\src\components\TodoList\List\Item.tsx
  */
 import React, { FC, ReactElement } from 'react';
@@ -17,21 +17,21 @@ const TdItem: FC<IProps> = ({
     todo,
     toggleTodo,
     removeTodo
-}):ReactElement => {
+}): ReactElement => {
 
-    const {id, content, completed} = todo;
+    const { id, content, completed } = todo;
 
     return (
         <div className="item">
-            <input 
-                type="text" 
+            <input
+                type="checkbox"
                 checked={completed}
-                onChange = {() => toggleTodo(id)}    
+                onChange={() => toggleTodo(id)}
             />
-            <span 
-                style={{textDecoration: completed ? 'line-through' : 'none'}}
+            <span
+                style={{ textDecoration: completed ? 'line-through' : 'none' }}
             >{content}</span>
-            <button 
+            <button
                 onClick={() => removeTodo(id)}
             >删除</button>
 
